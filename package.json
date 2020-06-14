@@ -9,9 +9,14 @@
     "start": "rollup -c -w",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "popify",
+    "popup",
+    "react"
+  ],
+  "author": "Jozef Hruška <jo.hruska27@gmail.com>",
+  "license": "MIT",
+  "repository": "jozefhruska/popify",
   "files": [
     "dist"
   ],
