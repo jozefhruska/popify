@@ -51,9 +51,9 @@ export default App;
 
 | Name            | Type                                                     | Default value | Description                                                |
 | --------------- | -------------------------------------------------------- | ------------- | ---------------------------------------------------------- |
-| onClose         | `(() => any) | (() => Promise<any>)`                     | `undefined`   | Function to be called after popup is closed.               |
+| onClose         | `(() => any) \| (() => Promise<any>)`                     | `undefined`   | Function to be called after popup is closed.               |
 | primaryButton   | `ButtonHTMLAttributes<HTMLButtonElement>`                | `undefined`   | Object containing properties passed to primary button.     |
 | secondaryButton | `ButtonHTMLAttributes<HTMLButtonElement>`                | `undefined`   | Object containing properties passed to secondary button.   |
 | showCloseIcon   | `boolean`                                                | `true`        | Shows and hides close button.                              |
-| position        | `'left' | 'right'`                                       | `right`       | Specifies the position of popup window.                    |
-| styles          | `FlattenSimpleInterpolation | FlattenInterpolation<any>` | `undefined`   | Pass styled-component's `css` result to add custom styles. |
+| position        | `'left' \| 'right'`                                       | `right`       | Specifies the position of popup window.                    |
+| styles          | `FlattenSimpleInterpolation \| FlattenInterpolation<any>` | `undefined`   | Pass styled-component's `css` result to add custom styles. |
