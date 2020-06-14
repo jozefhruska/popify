@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { FlattenSimpleInterpolation, FlattenInterpolation } from 'styled-components';
 
 import { PopupWrapper, PopupCloseButton, PopupContent, PopupButtonWrapper } from './Popup.styles';
@@ -8,7 +7,7 @@ import PopupButton, { PopupButtonProps } from '../PopupButton/PopupButton';
 /* Props - <Popup />
 ============================================================================= */
 export type PopupProps = {
-  onClose: (() => any) | (() => Promise<any>);
+  onClose?: (() => any) | (() => Promise<any>);
   primaryButton?: PopupButtonProps;
   secondaryButton?: PopupButtonProps;
   showCloseIcon?: boolean;
@@ -39,7 +38,7 @@ const Popup: React.FC<PopupProps> = ({
         <PopupCloseButton
           aria-label="Close"
           onClick={async () => {
-            const onCloseResult = onClose();
+            const onCloseResult = !!onClose && onClose();
 
             if (onCloseResult instanceof Promise) {
               await onCloseResult;

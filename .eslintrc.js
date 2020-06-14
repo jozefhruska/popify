@@ -24,6 +24,7 @@ module.exports = {
     },
   },
   rules: {
+    'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'import/no-cycle': 'off',
     'react/prop-types': 'off',
