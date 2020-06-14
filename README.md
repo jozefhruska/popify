@@ -2,13 +2,13 @@
 
 A small library for building popups/notifications in React. Built with simplicity and accessibility in mind.
 
-[![stable](https://badgen.net//github/release/jozefhruska/popify/stable)](test)
+[![stable](https://badgen.net/npm/v/popify)](https://www.npmjs.com/package/popify)
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
 ## Installation 🛠
 
 ```
-  npm install popify
+npm install popify
 ```
 
 ## Usage ❓

@@ -12,6 +12,9 @@
   "keywords": [
     "popify",
     "popup",
+    "alert",
+    "notification",
+    "styled-components",
     "react"
   ],
   "author": "Jozef Hruška <jo.hruska27@gmail.com>",
