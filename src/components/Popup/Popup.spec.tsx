@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import Popup from './Popup';
 import { PopupContent, PopupCloseButton } from './Popup.styles';
-import PopupButton from '../PopupButton/PopupButton';
+import { PrimaryPopupButton, SecondaryPopupButton } from '../PopupButton/PopupButton';
 
 describe('<Popup />', () => {
   test('Shows correct content.', () => {
@@ -29,9 +29,11 @@ describe('<Popup />', () => {
 
   test('Hides both buttons if neither "primaryButton" nor "secondaryButton" props are passed.', () => {
     const tree = mount(<Popup>content</Popup>);
-    const buttons = tree.find(PopupButton);
+    const primaryButtons = tree.find(PrimaryPopupButton);
+    const secondaryButtons = tree.find(SecondaryPopupButton);
 
-    expect(buttons).toHaveLength(0);
+    expect(primaryButtons).toHaveLength(0);
+    expect(secondaryButtons).toHaveLength(0);
   });
 
   test('Shows a primary button if "primaryButton" prop is passed.', () => {
@@ -44,10 +46,9 @@ describe('<Popup />', () => {
         content
       </Popup>,
     );
-    const button = tree.find(PopupButton).first();
+    const button = tree.find(PrimaryPopupButton).first();
 
     expect(button.exists()).toEqual(true);
-    expect(button.prop('variant')).toEqual('primary');
   });
 
   test('Shows a secondary button if "secondaryButton" prop is passed.', () => {
@@ -60,10 +61,9 @@ describe('<Popup />', () => {
         content
       </Popup>,
     );
-    const button = tree.find(PopupButton).first();
+    const button = tree.find(SecondaryPopupButton).first();
 
     expect(button.exists()).toEqual(true);
-    expect(button.prop('variant')).toEqual('secondary');
   });
 
   test('Shows two buttons if both "primaryButton" and "secondaryButton" props are passed.', () => {
@@ -79,8 +79,10 @@ describe('<Popup />', () => {
         content
       </Popup>,
     );
-    const buttons = tree.find(PopupButton);
+    const primaryButtons = tree.find(PrimaryPopupButton);
+    const secondaryButtons = tree.find(SecondaryPopupButton);
 
-    expect(buttons).toHaveLength(2);
+    expect(primaryButtons).toHaveLength(1);
+    expect(secondaryButtons).toHaveLength(1);
   });
 });

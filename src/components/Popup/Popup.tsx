@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, ButtonHTMLAttributes } from 'react';
 import { FlattenSimpleInterpolation, FlattenInterpolation } from 'styled-components';
 
 import { PopupWrapper, PopupCloseButton, PopupContent, PopupButtonWrapper } from './Popup.styles';
-import PopupButton, { PopupButtonProps } from '../PopupButton/PopupButton';
+import { PrimaryPopupButton, SecondaryPopupButton } from '../PopupButton/PopupButton';
 
 /* Props - <Popup />
 ============================================================================= */
 export type PopupProps = {
   onClose?: (() => any) | (() => Promise<any>);
-  primaryButton?: PopupButtonProps;
-  secondaryButton?: PopupButtonProps;
+  primaryButton?: ButtonHTMLAttributes<HTMLButtonElement>;
+  secondaryButton?: ButtonHTMLAttributes<HTMLButtonElement>;
   showCloseIcon?: boolean;
   position?: 'left' | 'right';
   styles?: FlattenSimpleInterpolation | FlattenInterpolation<any>;
@@ -68,8 +68,8 @@ const Popup: React.FC<PopupProps> = ({
       <PopupContent>{children}</PopupContent>
 
       <PopupButtonWrapper>
-        {primaryButton && <PopupButton {...primaryButton} />}
-        {secondaryButton && <PopupButton variant="secondary" {...secondaryButton} />}
+        {primaryButton && <PrimaryPopupButton {...primaryButton} />}
+        {secondaryButton && <SecondaryPopupButton {...secondaryButton} />}
       </PopupButtonWrapper>
     </PopupWrapper>
   );
