@@ -1,0 +1,45 @@
+{
+  "name": "popify",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-typescript": "~4.1.2",
+    "@types/react": "~16.9.35",
+    "@types/react-dom": "~16.9.8",
+    "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "~3.2.0",
+    "@typescript-eslint/parser": "~3.1.0",
+    "eslint": "~6.8.0",
+    "eslint-config-airbnb": "~18.1.0",
+    "eslint-config-airbnb-typescript": "~8.0.2",
+    "eslint-config-prettier": "~6.11.0",
+    "eslint-plugin-import": "~2.21.2",
+    "eslint-plugin-jsx-a11y": "~6.2.3",
+    "eslint-plugin-react": "~7.20.0",
+    "eslint-plugin-react-hooks": "~2.5.1",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "rollup": "~2.13.1",
+    "rollup-plugin-typescript2": "~0.27.1",
+    "styled-components": "~5.0.1",
+    "typescript": "~3.9.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
+    "styled-components": ">=5.0.1"
+  }
+}
